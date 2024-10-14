@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang</title>
+    <title>Kasir Toko WARBIR</title>
+    <style>
+        body {
+            font-family: 'Arial, Arial Bold';
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .login-container {
+            background-color: white;
+            width: 1000px; 
+            margin: 100px auto;
+            padding: 30px; 
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+            border-radius: 8px; 
+        }
+        .login-container h2 {
+            color: rgb(3, 2, 29);
+            margin-bottom: 20px; 
+        }
+        .logo {
+            width: 100%; 
+            height: auto; 
+            max-height: 300px; 
+            margin-bottom: 20px; 
+        }
+        .login-form {
+            display: flex;
+            flex-direction: column; 
+        }
+        .login-form label {
+            text-align: left; 
+            margin-bottom: 5px; 
+        }
+        .login-form input[type="text"],
+        .login-form input[type="password"],
+        .login-form select {
+            width: 100%; 
+            padding: 15px; 
+            margin: 10px 0;
+            font-size: 1em; 
+            border: 1px solid #ccc; 
+            border-radius: 4px;
+        }
+        .login-form input[type="submit"] {
+            background-color: rgb(18, 4, 107);
+            color: white;
+            border: none;
+            padding: 15px; 
+            cursor: pointer;
+            width: 100%; 
+            font-size: 1em; 
+            border-radius: 4px; 
+        }
+        .login-form input[type="submit"]:hover {
+            background-color: rgb(20, 0, 134);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="c:\Users\PC LAB SI 32\Pictures\warung.jpg" alt="Logo Toko WARBIR" class="logo">
+        <h2>Selamat Datang</h2>
+        <h2>Kasir Toko <br> WARBIR</h2>
+        <form action="login.php" method="POST" class="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="level">Level:</label>
+            <select id="level" name="level">
+                <option value="admin">Admin</option>
+                <option value="kasir">Kasir</option>
+            </select>
+            
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>
