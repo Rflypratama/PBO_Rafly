@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beranda</title>
+        <link rell="style" href="pii.css">
+       
+</head>
+<body>
+    <h1>Selamat Datang di Halaman Beranda</h1>
+    <a href="about.html">Tentang Kami</a>
+    
+    <button onclick="bukaBukuTamu()">Buka Buku Tamu</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Pesan</th>
+            </tr>
+        </thead>
+        <tbody id="guestData">
+        </tbody>
+    </table>
+ 
+    <script>
+        function bukaBukuTamu() {
+            const nama = prompt("Masukkan Nama Anda:");
+            const email = prompt("Masukkan Email Anda:");
+            const pesan = prompt("Masukkan Pesan Anda:");
+            const table = document.getElementById("guestData");
+            const row = table.insertRow();
+            row.insertCell(0).innerText = nama;
+            row.insertCell(1).innerText = email;
+            row.insertCell(2).innerText = pesan;
+        }
+    </script>
+</body>
+</html>
